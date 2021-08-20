@@ -63,6 +63,74 @@
   --bs-body-bg: #fff;
 }
 
+/* custom price tag */
+.card-price {
+	display: inline-block;
+  /* margin-top: 15px; */
+  width: auto;
+	height: 38px;
+	
+	background-color: #6ab070;
+	-webkit-border-radius: 3px 4px 4px 3px;
+	-moz-border-radius: 3px 4px 4px 3px;
+	border-radius: 3px 4px 4px 3px;
+	
+	border-left: 1px solid #6ab070;
+
+	/* This makes room for the triangle */
+	margin-left: 19px;
+	
+	position: relative;
+	
+	color: white;
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 38px;
+
+	padding: 0 10px 0 10px;
+}
+
+/* Makes the triangle */
+.card-price:before {
+	content: "";
+	position: absolute;
+	display: block;
+	left: -19px;
+	width: 0;
+	height: 0;
+	border-top: 19px solid transparent;
+	border-bottom: 19px solid transparent;
+	border-right: 19px solid #6ab070;
+}
+
+/* Makes the circle */
+.card-price:after {
+	content: "";
+	background-color: white;
+	border-radius: 50%;
+	width: 4px;
+	height: 4px;
+	display: block;
+	position: absolute;
+	left: -9px;
+	top: 17px;
+}
+/* custom text color */
+.t-color {
+  color: #fff;
+}
+.t-color2 {
+  color: #d9aa00;
+}
+.t-color3 {
+  color: #E5E5E5;
+}
+.t-color4 {
+  color: #000;
+}
+.s-icon{
+  color: rgb(255, 215, 0);
+}
 *,
 *::before,
 *::after {
@@ -3025,6 +3093,7 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
+  border-color: #fff;
   background: rgb(55,68,79);
 background: linear-gradient(90deg, rgba(55,68,79,1) 0%, rgba(105,114,121,1) 50%, rgba(87,87,87,1) 100%);
 }
@@ -11328,6 +11397,9 @@ p {
   padding: 0;
   border-radius: 100%;
 }
+.btn-social:hover{
+  color:#ffc800;
+}
 
 #mainNav {
   padding-top: 1rem;
@@ -11420,8 +11492,8 @@ background: linear-gradient(90deg, rgba(55,68,79,1) 0%, rgba(105,114,121,1) 50%,
   /* pengaturan asli */
   /* padding-top: 10.5rem;
   padding-bottom: 6rem; */
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  /* padding-bottom: 1rem; */
   text-align: center;
   color: #fff;
   /* background-image: url("../assets/img/header-bg.jpg"); */
